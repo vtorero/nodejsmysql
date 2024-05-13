@@ -6,7 +6,7 @@ import indexRouter from './routes/index.routes.js';
 const app = express();
 
 app.use(express.json());
-app.use(indexRouter)
+app.use('/api/',indexRouter)
 app.use('/api/',employeesRoute);
 
 app.use((req,res,next)=>{
