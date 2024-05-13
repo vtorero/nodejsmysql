@@ -7,7 +7,8 @@ const app = express();
 
 app.use(express.json());
 app.use(indexRouter)
-app.use('/api',employeesRoute);
+app.use('/api/',employeesRoute);
+
 app.use((req,res,next)=>{
     res.status(404).json({
         message:'Endpoint not found'
